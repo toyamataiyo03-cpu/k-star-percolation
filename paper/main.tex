@@ -70,7 +70,7 @@ For large $k$ we test contacts in $O(k)$ rather than $O(k^2)$ operations: each a
 This test agreed with brute force on $1.3\times10^6$ random configurations.
 The code uses Numba~\cite{Numba}.
 
-\section{Exact contact geometry}
+\section{Contact condition and lattice representation}
 Set $a=1$, $h=2\pi/k$ and $r=2(1-\varepsilon)$ for the centre distance.
 Let $D(k)=4\pi-\Aex=8\pi\int_0^1(1-\varepsilon)\,[1-P_k(\varepsilon)]\,d\varepsilon$, where $P_k$ is the contact probability at distance $r$.
 
@@ -113,7 +113,7 @@ If $2(\delta_{\max}-\eta)\ge h$, the stars touch for every pair of orientations.
 \noindent The upper bound holds because $T_r$ projects onto $[-\delta_{\max},\delta_{\max}]$ in $\delta$ and the lattice is $h$-periodic in $u$.
 For the lower bound, concavity gives $u$-fibres of length $\ge h$ for every $|\delta|\le\delta_{\max}-\eta$; their images cover the full period.
 
-\section{Theorems}
+\section{Main theorems}
 Let $\varepsilon^*=(h/2c)^{2/3}=(\pi/ck)^{2/3}$.
 
 \begin{theorem}[excluded area]
@@ -148,14 +148,14 @@ Conversely, by~\eqref{eq:bounds} and monotonicity, stars with centre distance $\
 \begin{conjecture}\label{conj}
 $(n_c-\nd)a^2=\dfrac{\eta_cC}{4\pi^2}k^{-2/3}+o(k^{-2/3})$, with $\eta_cC/4\pi^2\approx0.873$; equivalently $B_c(k)=B_c^{\rm disk}+o(k^{-2/3})$.
 \end{conjecture}
-\noindent\textit{Heuristic.}
+\noindent\textit{Heuristic argument.}
 The star graph differs from the disk graph only through missing edges in the band $2a(1-\varepsilon_1)<r<2a$, missing with probability $1-P_k(r)$.
 If the threshold of a connection-function model, $n_c[g]$, were differentiable at the hard-disk function with a sensitivity kernel $K(r)$ continuous at $r=2a$, the change would be $K(2a)D(k)+o(D)$.
 Exact scaling of disk radius fixes $K(2a)=\nd/(4\pi a^2)$, which gives the conjecture.
 Orientation-induced correlations between missing edges enter only at second order because missing edges are rare.
 Neither the differentiability nor the continuity of $K$ is proven for continuum percolation, so we state this as a conjecture.
 
-\section{Results}
+\section{Numerical results}
 \subsection{Thresholds}
 Table~\ref{tab:results} and Fig.~\ref{fig:thr}(a) list $n_c$.
 For $k=2$ we obtain $1.4095(6)$, in agreement with the exact reference $1.4093215$.
@@ -229,7 +229,7 @@ The research design, theoretical analysis, simulation code, data analysis, figur
 The author takes responsibility for the content.
 
 \appendix
-\section{Explicit constants (computer-assisted)}\label{app:rigorous}
+\section{Computer-assisted derivation of the explicit constants}\label{app:rigorous}
 For $0<\varepsilon\le0.1$ we sandwich $g_\varepsilon$ between explicit functions using
 $u-\tfrac23u^3+\tfrac2{15}u^5-\tfrac4{315}u^7\le\tfrac12\sin2u\le u-\tfrac23u^3+\tfrac2{15}u^5$ and
 $x+\tfrac{x^3}6+\tfrac{3x^5}{40}\le\arcsin x\le x+\tfrac{x^3}6+\tfrac{3x^5}{40}+R_7x^7$ on $[0,0.55]$, $R_7\le0.05652$.

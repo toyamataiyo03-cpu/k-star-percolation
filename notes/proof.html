@@ -51,7 +51,7 @@ $$\langle A_{\rm ex}\rangle_k=\int_0^2 2\pi r\,P_k(r)\,dr .$$
 $r=2(1-\varepsilon)$ と書くと，$1-\varepsilon$ の因子を含めて次のようになる。
 $$D(k):=4\pi-\langle A_{\rm ex}\rangle_k = 8\pi\int_0^1(1-\varepsilon)\bigl(1-P_k\bigr)\,d\varepsilon .$$</p>
 
-<h2>2. 二本の腕の接触条件（厳密）</h2>
+<h2>2. 二本の腕の接触条件</h2>
 <div class="lem"><b>補題 1</b>　A の腕が線分 AB となす角を $\alpha$，B の腕が線分 BA となす角を $\beta$ とし，同じ側を正にとる。$r&gt;1$ のとき，二本の腕が交わる必要十分条件は，$\alpha,\beta$ が同符号，$|\alpha|+|\beta|&lt;\pi$，かつ
 $$r\sin|\beta|\le\sin(|\alpha|+|\beta|),\qquad r\sin|\alpha|\le\sin(|\alpha|+|\beta|).$$</div>
 <div class="proof">腕が反対側にあれば，交わるのは直線 AB 上だけであり，そのような配置の確率は 0 である。同じ側にある場合，交点 X は三角形 ABX をなし，その A, B での内角は $|\alpha|,|\beta|$ である。正弦定理から $AX=r\sin|\beta|/\sin(|\alpha|+|\beta|)$，$BX=r\sin|\alpha|/\sin(|\alpha|+|\beta|)$ となる。交わる条件は $AX\le1,\ BX\le1$ である。</div>
@@ -59,7 +59,7 @@ $$r\sin|\beta|\le\sin(|\alpha|+|\beta|),\qquad r\sin|\alpha|\le\sin(|\alpha|+|\b
 <div class="lem"><b>補題 2（単調性）</b>　$r&lt;r'$ ならば $S_r\supseteq S_{r'}$。</div>
 <div class="proof">不等式 $r\,x\le y$（$x\ge0$）は $r$ が小さいほど弱い条件になるからである。</div>
 
-<h2>3. 格子による厳密な表現</h2>
+<h2>3. 接触確率の格子表現</h2>
 <div class="lem"><b>補題 3</b>　腕の組の角度 $(\alpha_i,\beta_j)$ の全体は，一様な乱数ずれ $s\in[0,h)^2$ を用いて $s+h\mathbb Z^2$ と書ける。したがって
 $$P_k(r)=\frac{\bigl|\,T_r \bmod h\mathbb Z^2\,\bigr|}{h^2}$$
 が成り立つ（右辺の分子は，$T_r$ を格子で割った像の面積）。</div>
@@ -88,7 +88,7 @@ $$\min\Bigl\{1,\ \frac{2(\delta_{\max}-\eta)}{h}\Bigr\}\ \le\ P_k(r)\ \le\ \min\
 
 <p>命題 6 で等号を取ったものが，論文の式(3) $P=\min\{1,2\delta_{\max}/h\}$ である。両側の評価の差は $\eta$ だけで，その大きさは $O(h^2\sqrt\varepsilon)$ になる。</p>
 
-<h2>5′. 補題 5 の定数を明示した証明（計算機援用）</h2>
+<h2>5′. 計算機援用による補題 5 の定数の明示</h2>
 <p>補題 5 の「$O(\varepsilon^2)$」と「ある定数 $M$」を，$0&lt;\varepsilon\le\varepsilon_0=0.1$ の範囲で明示的な数に置き換える。使うのは初等的な不等式と，区間演算（Arb ライブラリ）による有限個の検証だけである。</p>
 <div class="lem"><b>補題 5′</b>　$0&lt;\varepsilon\le0.1$ のすべてで
 $$\Bigl|\delta_{\max}(\varepsilon)-c\,\varepsilon^{3/2}\bigl(1+\tfrac54\varepsilon\bigr)\Bigr|\le K_\delta\,\varepsilon^{7/2},\quad K_\delta=4.65;\qquad g_\varepsilon''\le0,\quad |g_\varepsilon''|\le M\sqrt\varepsilon,\quad M=21.96 .$$</div>
@@ -154,14 +154,14 @@ $\varepsilon_1$ の漸近形は §6 の結果による。$2n_c^{\rm disk}(\pi/c)
 </table>
 <p class="note">表の値は $n_c a^2$ である。$\varepsilon_1$ は，向きのずれを 300×300 の格子で調べ，すべてのずれで接触する最大の $\varepsilon$ を二分法で求めた（数値上の目安）。数値で求めた臨界密度はすべて証明した範囲に入っている。</p>
 
-<h2>9. 証明できたこと・できていないこと</h2>
+<h2>9. 証明の到達範囲</h2>
 <ul>
 <li><b>証明した</b>：接触確率の厳密な格子表現（補題 3）と，その上下からの評価（命題 6）。排除面積の k<sup>−2/3</sup> 則は，係数 $C$ と次の項の係数 $C'$ まで含めて導いた（定理 A）。臨界密度が円板の値に $O(k^{-2/3})$ で近づくことも示した（定理 B）。</li>
 <li><b>定数まで明示して証明した</b>：補題 5 の剰余項は補題 5′ で明示した（$K_\delta=4.65$，$M=21.96$）。定理 A は $k\ge106$ で誤差 $2396/k^2$ 以下，定理 B は $k\ge106$ で $\varepsilon_1\le1.1(\pi/ck)^{2/3}$ という形で成り立つ。補題 5′ の一部（剰余の上界）は区間演算による計算機援用証明である。これは丸め誤差まで含めて厳密だが，検証プログラム <code>rigorous.py</code> が正しいことを前提にしている。</li>
 <li><b>未解決</b>：$n_c(k)-n_c^{\rm disk}\simeq0.873\,k^{-2/3}$ という係数は，臨界平均接触数 $B_c$ が円板の値に収束するという仮定に基づく予想である。下からも $k^{-2/3}$ の大きさで評価すること（$n_c(k)&gt;n_c^{\rm disk}$ の定量版）は，連続体パーコレーションの「強化（enhancement）」型の議論が必要で，今回は扱っていない。</li>
 </ul>
 
-<h2>9′. 係数 0.873 の予想：根拠と未証明の一歩</h2>
+<h2>9′. 係数 0.873 に関する予想</h2>
 <p><b>予想 C．</b>$k\to\infty$ で
 $$n_c(k)\,a^2-n_c^{\rm disk}a^2=\frac{\eta_c\,C}{4\pi^2}\,k^{-2/3}+o(k^{-2/3}),\qquad \frac{\eta_c C}{4\pi^2}=\frac{B_c^{\rm disk}C}{16\pi^2}\approx0.873 .$$
 同じことだが，$B_c(k)=n_c\langle A_{\rm ex}\rangle$ は円板の値に $o(k^{-2/3})$ で近づく，と言ってもよい。</p>

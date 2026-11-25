@@ -50,8 +50,8 @@ K = np.array(ks)
 NC = np.array([res[k]["nc"] for k in ks]); ENC = np.array([res[k]["err"] for k in ks])
 
 # ---------- Fig 1: star shapes + snapshot ----------
-fig = plt.figure(figsize=(3.35, 5.0))
-ax0 = fig.add_axes([0.02, 0.60, 0.96, 0.39])
+fig = plt.figure(figsize=(6.8, 2.6))
+ax0 = fig.add_axes([0.0, 0.04, 0.5, 0.92])
 for i, k in enumerate([2, 3, 4, 6, 12, 48]):
     cx = (i % 3) * 2.6; cy = -(i // 3) * 3.0
     th = 0.3 + 2 * np.pi * np.arange(k) / k
@@ -63,7 +63,7 @@ for i, k in enumerate([2, 3, 4, 6, 12, 48]):
 ax0.set_xlim(-1.3, 6.5); ax0.set_ylim(-5.0, 1.15); ax0.set_aspect("equal"); ax0.axis("off")
 ax0.text(-1.3, 1.3, "(a)", va="top")
 
-ax1 = fig.add_axes([0.12, 0.01, 0.80, 0.56])
+ax1 = fig.add_axes([0.56, 0.03, 0.40, 0.94])
 rng = np.random.default_rng(3); k = 3; Lb = 12.0; A = 0.5
 n = int(res[3]["nc"] / A**2 * Lb * Lb)
 X = rng.random(n) * Lb; Y = rng.random(n) * Lb; T = rng.random(n) * 2 * np.pi / k
@@ -93,7 +93,7 @@ ax1.text(-0.6, Lb, "(b)", va="top", ha="right")
 fig.savefig("fig1_stars.png", dpi=300); plt.close(fig)
 
 # ---------- Fig 2: n_c vs k ----------
-fig, axs = plt.subplots(2, 1, figsize=(3.35, 4.9))
+fig, axs = plt.subplots(1, 2, figsize=(6.8, 2.6))
 ax = axs[0]
 ax.errorbar(K, NC, yerr=ENC, fmt="o", ms=3.5, color="k", mfc="w", label="this work")
 ax.axhline(STICK, ls="--", lw=0.7, color="C0"); ax.text(4, STICK + 0.03, "stick ($k=2$, exact ref.)", fontsize=7, color="C0")
@@ -113,7 +113,7 @@ ax.legend(fontsize=7, frameon=False, ncol=4, loc="lower center", handletextpad=0
 fig.tight_layout(); fig.savefig("fig2_threshold.png", dpi=300); plt.close(fig)
 
 # ---------- Fig 3: excluded-area deficit ----------
-fig, axs = plt.subplots(2, 1, figsize=(3.35, 4.9))
+fig, axs = plt.subplots(1, 2, figsize=(6.8, 2.6))
 ax = axs[0]
 ka = np.array(sorted(aex)); va = np.array([aex[k] for k in ka])
 m = ka >= 2
@@ -143,7 +143,7 @@ ax.legend(fontsize=7, frameon=False, loc="lower right"); ax.text(0.02, 0.92, "(b
 fig.tight_layout(); fig.savefig("fig3_excluded.png", dpi=300); plt.close(fig)
 
 # ---------- Fig 4: B_c ----------
-fig, axs = plt.subplots(2, 1, figsize=(3.35, 4.9))
+fig, axs = plt.subplots(1, 2, figsize=(6.8, 2.6))
 BC = np.array([res[k]["Bc"] for k in ks]); EBC = np.array([res[k]["eBc"] for k in ks])
 ax = axs[0]
 ax.errorbar(K, BC, yerr=EBC, fmt="o", ms=3.5, color="k", mfc="w")
@@ -153,7 +153,7 @@ ax.axhline(BC_STICK, ls="--", lw=0.7, color="C0"); ax.axhline(BC_DISK, ls="--", 
 ax.text(100, BC_STICK + 0.03, "stick", color="C0", fontsize=7); ax.text(100, BC_DISK - 0.12, "disk", color="C3", fontsize=7)
 ax.set_xscale("log"); ax.set_xlabel("$k$"); ax.set_ylabel(r"$B_c = n_c\langle A_{\rm ex}\rangle$")
 ax.set_xticks([2, 4, 8, 16, 32, 64, 128, 256, 512]); ax.set_xticklabels(["2", "4", "8", "16", "32", "64", "128", "256", "512"]); ax.minorticks_off()
-ax.text(0.02, 0.92, "(a)", transform=ax.transAxes)
+ax.text(0.96, 0.45, "(a)", transform=ax.transAxes, ha="right")
 ax = axs[1]
 dn = NC - DISK
 mk = K >= 6
@@ -169,7 +169,7 @@ ax.set_xlabel("$k$"); ax.legend(fontsize=7, frameon=False)
 ax.text(0.02, 0.05, "(b)", transform=ax.transAxes)
 fig.tight_layout(); fig.savefig("fig4_Bc.png", dpi=300); plt.close(fig)
 # ---------- Fig 5: test of the conjecture ----------
-fig, axs = plt.subplots(2, 1, figsize=(3.35, 4.6))
+fig, axs = plt.subplots(1, 2, figsize=(6.8, 2.5))
 ax = axs[0]
 ratio_old = [(k, (res[k]["nc"] - DISK) / (0.873 * k ** (-2 / 3)), res[k]["err"] / (0.873 * k ** (-2 / 3))) for k in ks if k >= 16 and k not in KH]
 ax.errorbar([r[0] for r in ratio_old], [r[1] for r in ratio_old], yerr=[r[2] for r in ratio_old], fmt="o", ms=3.5, color="k", mfc="w")

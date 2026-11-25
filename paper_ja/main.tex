@@ -1,6 +1,7 @@
 % XeLaTeX または LuaLaTeX でコンパイル（Overleaf: Menu → Compiler で選択）
 \documentclass[autodetect-engine,ja=standard,a4paper,twocolumn,10pt]{bxjsarticle}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{placeins}
 \usepackage{graphicx,booktabs}
 \setpagelayout{margin=18mm}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
@@ -51,11 +52,12 @@ $k=2$ は長さ $2a$ の棒，$k\to\infty$ は半径 $a$ の円板に一致す�
 星形の排除面積は剛体粒子の相挙動の文脈で調べられており\cite{Geigenfeind2019}，凸図形については臨界密度の形状依存性が厳密に研究されている\cite{RoyTanemura2002}。
 しかし調べた範囲では，$k\ge3$ の星の閾値と，それが円板の値に近づく速さは報告されていない。
 
-\begin{figure}[t]
-\centering\includegraphics[width=\columnwidth]{fig1_stars.png}
+
+\begin{figure*}[tb]
+\centering\includegraphics[width=0.92\textwidth]{fig1_stars.png}
 \caption{(a) $k$ 本腕の星（点線は半径 $a$ の円）。(b) $k=3$ の星を臨界密度付近で配置した例（$12\times12$ の領域）。赤は最大クラスター。}
 \label{fig:stars}
-\end{figure}
+\end{figure*}
 
 \section{モデルと数値計算の方法}
 一辺 $L$ の周期境界の正方形に，星の中心を一様に，向きを $[0,2\pi/k)$ で一様に置く。
@@ -109,6 +111,30 @@ $\eta=\frac{h^2}{8}\sup|g''_\varepsilon|$ とおくと，
 $2(\delta_{\max}-\eta)\ge h$ ならば，向きによらず必ず接触する。
 \end{proposition}
 
+\begin{figure*}[tb]
+\centering\includegraphics[width=0.92\textwidth]{fig2_threshold.png}
+\caption{(a) $n_ca^2$ の $k$ 依存性。(b) 有限サイズの推定値を外挿値で割ったもの。}
+\label{fig:thr}
+\end{figure*}
+\begin{table}[!b]
+\caption{臨界数密度，平均排除面積，臨界平均接触数。括弧内は最終桁の誤差（$1\sigma$）。}
+\label{tab:results}
+\centering\small
+\begin{tabular}{rlll}
+\toprule
+$k$ & $n_ca^2$ & $\Aex/a^2$ & $B_c$\\
+\midrule
+\csname @@input\endcsname table_data.tex
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure*}[tb]
+\centering\includegraphics[width=0.92\textwidth]{fig3_excluded.png}
+\caption{(a) 排除面積の不足。丸：モンテカルロ，実線：式\eqref{eq:bounds}の上界，破線：$Ck^{-2/3}$，一点鎖線：式\eqref{eq:thm1}。(b) 接触確率 $P(r)$。}
+\label{fig:aex}
+\end{figure*}
+
 \section{主定理}
 $\varepsilon^*=(\pi/ck)^{2/3}$ とする。
 \begin{theorem}[排除面積]
@@ -134,6 +160,7 @@ $k\to\infty$ で
 後者の臨界密度は，長さのスケーリングから $\nd/(1-\varepsilon_1)^2$ である。
 \end{proof}
 
+
 \begin{conjecture}\label{conj}
 $(n_c-\nd)a^2=\dfrac{\eta_cC}{4\pi^2}k^{-2/3}+o(k^{-2/3})$，$\eta_cC/4\pi^2\approx0.873$。
 同値な言い方として，$B_c=B_c^{\rm disk}+o(k^{-2/3})$。
@@ -144,39 +171,28 @@ $(n_c-\nd)a^2=\dfrac{\eta_cC}{4\pi^2}k^{-2/3}+o(k^{-2/3})$，$\eta_cC/4\pi^2\app
 半径を縮める相似変換から $K(2a)=\nd/4\pi a^2$ と決まり，予想が従う。
 ただし，この微分可能性と連続性は連続体パーコレーションでは証明されていない。
 
+\begin{figure*}[tb]
+\centering\includegraphics[width=0.92\textwidth]{fig4_Bc.png}
+\caption{(a) $B_c=n_c\Aex$。(b) $(n_c-\nd)a^2$。三角は定理2の厳密な上界，破線は予想\ref{conj}。四角は高精度計算。}
+\label{fig:bc}
+\end{figure*}
+\begin{figure*}[tb]
+\centering\includegraphics[width=0.92\textwidth]{fig5_conjecture.png}
+\caption{予想\ref{conj}の検定。(a) 臨界密度の変化を $0.873k^{-2/3}$ で割ったもの。(b) $B_c^{\rm disk}-B_c$。}
+\label{fig:conj}
+\end{figure*}
+
 \section{数値結果}
 臨界数密度などを表\ref{tab:results}と図\ref{fig:thr}に示す。
 $k=2$ では $1.4095(6)$ を得て，厳密値と一致した。
 すべての値は定理2の範囲に入っている（例：$k=64$ で $0.3591\le0.4148\le0.4587$）。
 
-\begin{table}[t]
-\caption{臨界数密度，平均排除面積，臨界平均接触数。括弧内は最終桁の誤差（$1\sigma$）。}
-\label{tab:results}
-\centering\small
-\begin{tabular}{rlll}
-\toprule
-$k$ & $n_ca^2$ & $\Aex/a^2$ & $B_c$\\
-\midrule
-\csname @@input\endcsname table_data.tex
-\bottomrule
-\end{tabular}
-\end{table}
 
-\begin{figure}[t]
-\centering\includegraphics[width=\columnwidth]{fig2_threshold.png}
-\caption{(a) $n_ca^2$ の $k$ 依存性。(b) 有限サイズの推定値を外挿値で割ったもの。}
-\label{fig:thr}
-\end{figure}
 
 排除面積の不足（図\ref{fig:aex}）では，定理1の2項の式が $k=512, 1024$ で4桁一致した。
 主要項だけでは $k=1024$ でも $2\%$ ずれる。
 $k\ge128$ の高精度モンテカルロ値も，証明した誤差の範囲内にある。
 
-\begin{figure}[t]
-\centering\includegraphics[width=\columnwidth]{fig3_excluded.png}
-\caption{(a) 排除面積の不足。丸：モンテカルロ，実線：式\eqref{eq:bounds}の上界，破線：$Ck^{-2/3}$，一点鎖線：式\eqref{eq:thm1}。(b) 接触確率 $P(r)$。}
-\label{fig:aex}
-\end{figure}
 
 $B_c$ は $k=2$ の $3.590$ から $k=3$ で $4.176$ に跳び，円板の値 $4.5123$ に近づく（図\ref{fig:bc}）。
 $k=4$〜$6$ ではほぼ横ばいだった。
@@ -184,16 +200,6 @@ $k=7, 9$ の追加計算から，偶奇性による振動ではないことが�
 予想\ref{conj}の検定（図\ref{fig:conj}）では，比 $(n_c-\nd)a^2/(0.873k^{-2/3})$ が $k=64,128,256,512$ で $1.021$，$1.011$，$1.007$，$1.005$ と 1 に近づいた。
 また $B_c^{\rm disk}-B_c$ は $0.0106$，$0.0047$，$0.0017$，$0.0006$ とおよそ $k^{-1.4}$ で減少し，予想が要求する $o(k^{-2/3})$ と整合する。
 
-\begin{figure}[t]
-\centering\includegraphics[width=\columnwidth]{fig4_Bc.png}
-\caption{(a) $B_c=n_c\Aex$。(b) $(n_c-\nd)a^2$。三角は定理2の厳密な上界，破線は予想\ref{conj}。四角は高精度計算。}
-\label{fig:bc}
-\end{figure}
-\begin{figure}[t]
-\centering\includegraphics[width=\columnwidth]{fig5_conjecture.png}
-\caption{予想\ref{conj}の検定。(a) 臨界密度の変化を $0.873k^{-2/3}$ で割ったもの。(b) $B_c^{\rm disk}-B_c$。}
-\label{fig:conj}
-\end{figure}
 
 \section{考察}
 正則な星の接触確率は格子の被覆問題に厳密に帰着でき，これにより $k^{-2/3}$ という遅い収束を証明できた。

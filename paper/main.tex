@@ -1,5 +1,6 @@
 \documentclass[pre,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{placeins}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
@@ -48,11 +49,6 @@ To our knowledge, however, percolation thresholds of stars with $k\ge3$, and the
 
 This paper (i) determines $n_c(k)$ numerically for $2\le k\le512$, (ii) proves that the excluded-area deficit decays as $k^{-2/3}$ with explicit constants, (iii) proves that $n_c(k)$ converges to the disk threshold at rate $O(k^{-2/3})$, and (iv) tests a conjectured prefactor and the excluded-area invariance.
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{fig1_stars.png}
-\caption{(a) $k$-armed stars (dotted circle: radius $a$). (b) Stars with $k=3$ near the threshold in a $12\times12$ region (units of $2a$); red: largest cluster.}
-\label{fig:stars}
-\end{figure}
 
 \section{Model and numerical method}
 Star centres are placed uniformly at random in an $L\times L$ periodic box, each with an independent uniform orientation in $[0,2\pi/k)$.
@@ -69,6 +65,12 @@ Errors are bootstrap estimates.
 For large $k$ we test contacts in $O(k)$ rather than $O(k^2)$ operations: each arm of one star that can reach the other star's disk is clipped to that disk, and the arms of the second star that hit the clipped piece are those whose angles lie in the angular interval it subtends---an $O(1)$ check because the arm angles form a lattice.
 This test agreed with brute force on $1.3\times10^6$ random configurations.
 The code uses Numba~\cite{Numba}.
+
+\begin{figure*}[tb]
+\includegraphics[width=0.86\textwidth]{fig1_stars.png}
+\caption{(a) $k$-armed stars (dotted circle: radius $a$). (b) Stars with $k=3$ near the threshold in a $12\times12$ region (units of $2a$); red: largest cluster.}
+\label{fig:stars}
+\end{figure*}
 
 \section{Contact condition and lattice representation}
 Set $a=1$, $h=2\pi/k$ and $r=2(1-\varepsilon)$ for the centre distance.
@@ -112,6 +114,18 @@ If $2(\delta_{\max}-\eta)\ge h$, the stars touch for every pair of orientations.
 \end{proposition}
 \noindent The upper bound holds because $T_r$ projects onto $[-\delta_{\max},\delta_{\max}]$ in $\delta$ and the lattice is $h$-periodic in $u$.
 For the lower bound, concavity gives $u$-fibres of length $\ge h$ for every $|\delta|\le\delta_{\max}-\eta$; their images cover the full period.
+
+\begin{figure*}[tb]
+\includegraphics[width=0.86\textwidth]{fig2_threshold.png}
+\caption{(a) $n_ca^2$ versus $k$; dashed: stick and disk values; dotted: $B_c^{\rm disk}/\Aex$. (b) Finite-size estimates normalised by the extrapolated value.}
+\label{fig:thr}
+\end{figure*}
+
+\begin{figure*}[tb]
+\includegraphics[width=0.86\textwidth]{fig3_excluded.png}
+\caption{(a) Excluded-area deficit: Monte Carlo (circles), upper bound of Eq.~\eqref{eq:bounds} (solid), $Ck^{-2/3}$ (dashed), two-term formula~\eqref{eq:thm1} (dash-dotted). (b) Contact probability $P(r)$; points: simulation, lines: upper bound.}
+\label{fig:aex}
+\end{figure*}
 
 \section{Main theorems}
 Let $\varepsilon^*=(h/2c)^{2/3}=(\pi/ck)^{2/3}$.
@@ -162,7 +176,7 @@ For $k=2$ we obtain $1.4095(6)$, in agreement with the exact reference $1.409321
 Finite-size effects are below $0.3\%$ for all $k$ [Fig.~\ref{fig:thr}(b)].
 $n_c$ decreases monotonically with $k$, and all values lie within the bounds of Theorem~2 (e.g.\ $0.3591\le0.4148\le0.4587$ at $k=64$).
 
-\begin{table}
+\begin{table}[!ht]
 \caption{Critical number density, mean excluded area and critical mean number of contacts. Numbers in parentheses are $1\sigma$ errors in the last digits.}
 \label{tab:results}
 \begin{ruledtabular}
@@ -174,11 +188,18 @@ $k$ & $n_ca^2$ & $\Aex/a^2$ & $B_c$\\
 \end{ruledtabular}
 \end{table}
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{fig2_threshold.png}
-\caption{(a) $n_ca^2$ versus $k$; dashed: stick and disk values; dotted: $B_c^{\rm disk}/\Aex$. (b) Finite-size estimates normalised by the extrapolated value.}
-\label{fig:thr}
-\end{figure}
+
+
+\begin{figure*}[tb]
+\includegraphics[width=0.86\textwidth]{fig4_Bc.png}
+\caption{(a) $B_c=n_c\Aex$; dashed: stick and disk values. (b) $(n_c-\nd)a^2$ with the rigorous upper bound of Theorem~2 (triangles), the excluded-area estimate (dotted) and Conjecture~\ref{conj} (dashed). Squares: high-precision runs.}
+\label{fig:bc}
+\end{figure*}
+\begin{figure*}[tb]
+\includegraphics[width=0.86\textwidth]{fig5_conjecture.png}
+\caption{Test of Conjecture~\ref{conj}. (a) Measured threshold shift divided by $0.873k^{-2/3}$. (b) $B_c^{\rm disk}-B_c$ with reference slopes.}
+\label{fig:conj}
+\end{figure*}
 
 \subsection{Excluded area}
 Figure~\ref{fig:aex}(a) compares the Monte Carlo deficit $4\pi-\Aex/a^2$ with Theorem~1.
@@ -186,11 +207,6 @@ The upper bound in~\eqref{eq:bounds} differs from Monte Carlo by $5\%$, $1.1\%$ 
 The two-term formula~\eqref{eq:thm1} matches the upper bound to four digits at $k=512$ and $1024$, whereas the leading term alone is $2\%$ off even at $k=1024$.
 High-precision Monte Carlo values for $k\ge128$ (Table~\ref{tab:results}) agree with~\eqref{eq:thm1} within the proven error bound.
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{fig3_excluded.png}
-\caption{(a) Excluded-area deficit: Monte Carlo (circles), upper bound of Eq.~\eqref{eq:bounds} (solid), $Ck^{-2/3}$ (dashed), two-term formula~\eqref{eq:thm1} (dash-dotted). (b) Contact probability $P(r)$; points: simulation, lines: upper bound.}
-\label{fig:aex}
-\end{figure}
 
 \subsection{Critical mean number of contacts and the conjecture}
 $B_c$ rises from $3.590$ at $k=2$ (stick value $3.589$) to $4.176$ at $k=3$ and then towards the disk value $4.5123$ [Fig.~\ref{fig:bc}(a)].
@@ -202,17 +218,7 @@ Figure~\ref{fig:conj} tests Conjecture~\ref{conj}.
 The ratio $(n_c-\nd)a^2/(0.873k^{-2/3})$ is $1.021$, $1.011$, $1.007$ and $1.005$ at $k=64$, $128$, $256$ and $512$, approaching unity.
 $B_c^{\rm disk}-B_c$ decays roughly as $k^{-1.4}$ ($0.0106$, $0.0047$, $0.0017$, $0.0006$), i.e.\ faster than $k^{-2/3}$, as the conjecture requires.
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{fig4_Bc.png}
-\caption{(a) $B_c=n_c\Aex$; dashed: stick and disk values. (b) $(n_c-\nd)a^2$ with the rigorous upper bound of Theorem~2 (triangles), the excluded-area estimate (dotted) and Conjecture~\ref{conj} (dashed). Squares: high-precision runs.}
-\label{fig:bc}
-\end{figure}
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{fig5_conjecture.png}
-\caption{Test of Conjecture~\ref{conj}. (a) Measured threshold shift divided by $0.873k^{-2/3}$. (b) $B_c^{\rm disk}-B_c$ with reference slopes.}
-\label{fig:conj}
-\end{figure}
 
 \section{Discussion}
 The contact probability of two regular stars reduces exactly to a lattice-covering problem, which makes the large-$k$ limit tractable and reveals the anomalous $k^{-2/3}$ approach to the disk.

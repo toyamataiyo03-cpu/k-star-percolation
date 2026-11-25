@@ -107,8 +107,9 @@ The full runs took about 2 hours on a 10-core laptop.
 
 ## Use of generative AI
 
-The research design, theoretical analysis, simulation code, data analysis, figures and manuscript drafts
-were produced with substantial use of a generative AI system (Claude, Anthropic). {A['contrib_en']}
+{A['contrib_en']} This work made extensive use of a generative AI system (Claude, Anthropic), which, under the
+author's direction, carried out the theoretical analysis, wrote the simulation and verification code, analysed the data,
+prepared the figures and drafted the manuscript. All code and data are in this repository, so every result can be reproduced.
 
 ## Licence
 
@@ -123,7 +124,7 @@ Code: MIT (`LICENSE`). Data, figures, manuscripts and notes: CC BY 4.0 (`LICENSE
 腕の本数 k を増やして円板に近づけたとき，平均排除面積の円板との差が k^(−2/3) という遅い速さで縮むことを，
 係数まで含めて証明した（定理1）。また，臨界密度が円板の値に O(k^(−2/3)) で近づくことを，
 円板の臨界値を使わずに証明した（定理2）。係数 0.873 は予想であり，k = 512 までの数値と 0.5% 以内で一致する。
-研究の設計・解析・コード・原稿は生成AI（Claude）を大幅に用いて作成した。
+本研究では生成AI（Claude）を全面的に活用し，著者の指示のもとで解析・コード・図・原稿の起草を行った。
 """
 open(os.path.join(DST, "README.md"), "w").write(README)
 import re

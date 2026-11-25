@@ -1,0 +1,227 @@
+# Step 2 — Search and Deduplicate
+Timestamp: 2026-11-24T22:08:54Z
+
+Queries (paper-search; arXiv, OpenAlex, Crossref answered; Semantic Scholar HTTP 429, DBLP/OpenReview unavailable):
+1. continuum percolation threshold star-shaped objects arms
+2. continuum percolation excluded area two dimensions
+3. percolation crosses multipods branched particles excluded area threshold
+4. Boolean model critical intensity shape dependence non-convex grains
+5. percolation of cross-shaped plus-shaped objects random orientation
+
+Merged unique titles (deduplicated by normalized title):
+-   [1] (score 4) Continuum percolation thresholds in two dimensions
+-   [2] (score 4) Universal percolation-threshold limits in the continuum
+-   [3] (score 4) Continuum percolation threshold for interpenetrating squares and cubes
+-   [4] (score 4) Continuum percolation for randomly oriented soft-core prisms
+-   [5] (score 4) Continuum percolation of permeable objects
+-   [6] (score 4) Symmetry of the continuum percolation threshold in systems of two different size objects
+-   [7] (score 3) Transport properties of continuum systems near the percolation threshold
+-   [8] (score 3) Precise determination of the critical threshold and exponents in a three-dimensional continuum percolation model
+-   [9] (score 3) Recent developments in continuum percolation
+-   [10] (score 3) Star-shaped polymers having PEO arms
+-   [11] (score 3) Continuum Percolation of Rods
+-   [12] (score 3) Universality and cluster structures in continuum models of percolation with two different radius distributions
+-   [13] (score 3) Percolation threshold of a two-dimensional continuum system
+-   [14] (score 3) Systematic derivation of percolation thresholds in continuum systems
+-   [15] (score 3) New, heuristic, percolation criterion for continuum systems
+-   [16] (score 3) From discrete to continuous percolation in dimensions 3 to 7
+-   [17] (score 3) Two-Dimensional Continuum Percolation Threshold for Diffusing Particles of Nonzero Radius
+-   [18] (score 3) Difference between lattice and continuum failure threshold in percolation
+-   [19] (score 3) Continuum Percolation Threshold for Permeable Aligned Cylinders and Opportunistic Networking
+-   [20] (score 3) On the critical threshold for continuum AB percolation
+-   [21] (score 3) Anisotropy in finite continuum percolation: Threshold estimation by Minkowski functionals
+-   [22] (score 3) Percolation thresholds of two-dimensional continuum systems of rectangles [with erratum]
+-   [23] (score 3) Scaling relation for determining the critical threshold for continuum percolation of overlapping discs of two sizes
+-   [24] (score 3) Transport Properties Near the Percolation Threshold of Continuum Systems
+-   [25] (score 3) Two-Dimensional Continuum Percolation Threshold as a Function of the Radius of the Diffusing Particles
+-   [26] (score 2) On Continuum Percolation
+-   [27] (score 2) Arm exponents in high dimensional percolation
+-   [28] (score 2) Randomly Diluted Inhomogeneous Elastic Networks near the Percolation Threshold
+-   [29] (score 2) Outlets of 2D invasion percolation and multiple-armed incipient infinite clusters
+-   [30] (score 2) Dispersive effects and high frequency behaviour for the Schrödinger equation in star-shaped networks
+-   [31] (score 2) Random site percolation thresholds on square lattice for complex neighborhoods containing sites up to the sixth coordination zone
+-   [32] (score 2) Multiple tunnel effect for dispersive waves on a star-shaped network: an explicit formula for the spectral representation
+-   [33] (score 2) Homological percolation on a torus: plaquettes and permutohedra
+-   [34] (score 2) Gyrotropic Percolation
+-   [35] (score 2) Critical percolation threshold restricts late-summer Arctic sea ice melt pond coverage
+-   [36] (score 2) Generic arm separation for planar percolation models
+-   [37] (score 2) Other continuum percolation models
+-   [38] (score 2) Continuum percolation
+-   [39] (score 1) Percolation analysis of stochastic models of galactic evolution
+-   [40] (score 1) Percolation in quantum computation and communication
+-   [41] (score 1) Mixed-wet percolation on a dual square lattice
+-   [1] (score 4) Excluded volume and its relation to the onset of percolation
+-   [2] (score 4) Continuum percolation in two dimensions: Monte Carlo tests of scaling and universality for non-interacting discs
+-   [3] (score 4) Universal percolation-threshold limits in the continuum
+-   [4] (score 4) Reconsideration of continuum percolation of isotropically oriented sticks in three dimensions
+-   [5] (score 4) Percolation thresholds of two-dimensional continuum systems of rectangles
+-   [6] (score 4) Point to point continuum percolation in two dimensions
+-   [7] (score 4) Percolation Thresholds and Excluded Area for Penetrable Rectangles in Two Dimensions
+-   [8] (score 4) Continuum Percolation in Anisotropic Rectangles: The Role of Excluded Area and Average Connectivity at the Threshold
+-   [9] (score 4) Percolation thresholds of two-dimensional continuum systems of rectangles [with erratum]
+-   [10] (score 4) Area covered by disks in small-bounded continuum percolating systems: An application to the string percolation model
+-   [11] (score 3) Continuum percolation thresholds in two dimensions
+-   [12] (score 3) Continuum percolation with steps in the square or the disc
+-   [13] (score 3) Monte Carlo study of correlated continuum percolation: Universality and percolation thresholds
+-   [14] (score 3) Universality and cluster structures in continuum models of percolation with two different radius distributions
+-   [15] (score 3) Lattice and continuum percolation transport exponents: Experiments in two-dimensions
+-   [16] (score 3) Continuum percolation with discs having a distribution of radii
+-   [17] (score 3) Monte-Carlo renormalisation group for continuum percolation with excluded-volume interactions
+-   [18] (score 3) Concentration gradient approach to continuum percolation in two dimensions
+-   [19] (score 3) Monte Carlo results for continuum percolation in low and high dimensions
+-   [20] (score 3) Continuum percolation of polydisperse hyperspheres in infinite dimensions
+-   [21] (score 3) Leaf-excluded percolation in two and three dimensions
+-   [22] (score 2) Precise determination of the critical threshold and exponents in a three-dimensional continuum percolation model
+-   [23] (score 2) Critical Behavior of the Two-Dimensional Sticks System
+-   [24] (score 2) CONTINUUM PERCOLATION (Cambridge Tracts in Mathematics 119)
+-   [25] (score 2) Two-dimensional continuum percolation and conduction
+-   [26] (score 2) Bond Percolation in Two Dimensions
+-   [27] (score 2) Towards the spin-glass transition in finite dimensions via blue percolation
+-   [28] (score 2) Gyrotropic Percolation
+-   [29] (score 2) The excluded area of two-dimensional hard particles
+-   [30] (score 2) Finite-Size Scaling in Two-dimensional Continuum Percolation Models
+-   [31] (score 2) Directed percolation and directed animals
+-   [32] (score 2) Other continuum percolation models
+-   [33] (score 2) Continuum percolation
+-   [34] (score 1) Percolation in quantum computation and communication
+-   [35] (score 1) Mixed-wet percolation on a dual square lattice
+-   [36] (score 1) Homological percolation on a torus: plaquettes and permutohedra
+-   [37] (score 1) Dimensions: A Competitor to Scopus and the Web of Science?
+-   [38] (score 1) A new look at the interfaces in percolation
+-   [39] (score 1) $N$-cluster correlations in four- and five-dimensional percolation
+-   [3] (score 4) Continuum percolation of congruent overlapping spherocylinders
+-   [4] (score 4) Continuum percolation of permeable objects
+-   [6] (score 4) Geometrical percolation threshold of congruent cuboidlike particles in overlapping particle systems
+-   [9] (score 4) Anisotropy in finite continuum percolation: Threshold estimation by Minkowski functionals
+-   [10] (score 4) Percolation thresholds of two-dimensional continuum systems of rectangles [with erratum]
+-   [11] (score 3) Continuum percolation threshold for interpenetrating squares and cubes
+-   [12] (score 3) Enhanced thermal conductivity over percolation threshold in polyimide blend films containing ZnO nano-pyramidal particles: advantage of vertical double percolation structure
+-   [13] (score 3) Two-dimensional continuum percolation threshold for diffusing particles of nonzero radius.
+-   [14] (score 3) Percolation behavior of long permeable objects: A reference interaction-site-model study
+-   [15] (score 3) Monte Carlo results for continuum percolation in low and high dimensions
+-   [16] (score 3) Percolation and structural properties of particle deposits
+-   [17] (score 3) Stability boundaries, percolation threshold, and two-phase coexistence for polydisperse fluids of adhesive colloidal particles
+-   [18] (score 3) Percolation-type growth of branched polymers near gelation threshold
+-   [19] (score 3) Extending the excluded volume for percolation threshold estimates in polydisperse systems: The binary disk system
+-   [20] (score 3) Simulation of percolation threshold in composites filled with conducting particles of various morphologies
+-   [21] (score 3) Principal component analysis of the excluded area of two-dimensional hard particles
+-   [22] (score 3) The electrical resistivity and percolation threshold of MWCNTs/polymer composites filled with a few aligned carbonyl iron particles
+-   [23] (score 3) Two-Dimensional Continuum Percolation Threshold as a Function of the Radius of the Diffusing Particles
+-   [24] (score 3) Toroidal quantum gravity: I. Foundations
+-   [25] (score 3) The excluded area of two-dimensional hard particles
+-   [26] (score 3) Gyrotropic Percolation
+-   [27] (score 3) Critical percolation threshold restricts late-summer Arctic sea ice melt pond coverage
+-   [28] (score 3) The Excluded Area of Superellipse Sector Particles
+-   [29] (score 3) Percolation thresholds of randomly rotating patchy particles on Archimedean lattices
+-   [30] (score 3) Significant Improvement In The Piezoelectric Properties Of Pzt / Pvb Composites By Inclusion Of Zno Nano-Particles And Its Behaviour Near Percolation Threshold
+-   [31] (score 2) Universality of the excess number of clusters and the crossing probability function in three-dimensional percolation
+-   [32] (score 2) Percolation threshold of a random array of discs: a numerical simulation
+-   [33] (score 2) A Remark Concerning Percolation Thresholds in Polydisperse Systems of Finite-Diameter Rods
+-   [34] (score 2) Random site percolation thresholds on square lattice for complex neighborhoods containing sites up to the sixth coordination zone
+-   [35] (score 2) Homological percolation on a torus: plaquettes and permutohedra
+-   [36] (score 2) Design-Based Cross-Validation for Comparing Small Area Estimators
+-   [37] (score 2) Percolation in binary mixtures of linkers and particles: chaining {\it {vs}} branching
+-   [38] (score 2) Europe Crosses the Threshold
+-   [39] (score 2) percolation threshold
+-   [40] (score 2) Synthesis and Characterization of Novel Multipods-Branched Cd-Se-S Micro-/Nano-Structures
+-   [41] (score 1) Tricritical Point in Explosive Percolation
+-   [42] (score 1) Elastic percolation in suspensions flocculated by polymer bridging
+-   [43] (score 1) Percolation in quantum computation and communication
+-   [44] (score 1) Mixed-wet percolation on a dual square lattice
+-   [45] (score 1) Long paths in first passage percolation on the complete graph II. Global branching dynamics
+-   [46] (score 1) Classification of branched Willmore spheres
+-   [47] (score 0) Modelling of exfoliated graphite
+-   [48] (score 0) GIANT ELECTROSTRICTION OF SOFT NANOCOMPOSITES FOR MECHANICAL ENERGY HARVESTING
+-   [1] (score 6) Critical intensities of Boolean models with different underlying convex shapes
+-   [2] (score 5) The Estimation of mean shape and mean particle number in overlapping particle systems in the plane
+-   [3] (score 5) Robustness in the Poisson Boolean model with convex grains
+-   [4] (score 4) The critical radiation intensity for direct collapse black hole formation: dependence on the radiation spectral shape
+-   [5] (score 4) Grains3D, a flexible DEM approach for particles of arbitrary convex shape—Part III: extension to non-convex particles modelled as glued convex particles
+-   [6] (score 4) Shapes of grain inclusions in crystals
+-   [7] (score 4) Domain Walls and Shape Dependence in the Two-Dimensional Ising-Model Critical Region
+-   [8] (score 4) Discrete approximation of the linear Boolean model of heterogeneous materials
+-   [9] (score 4) Percolation in the Boolean model with convex grains in high dimension
+-   [10] (score 4) Longest visible rays in Boolean models with general convex grains
+-   [11] (score 4) Development of simple model for size and shape dependence of critical temperature for ferromagnetic nanomaterials
+-   [12] (score 3) Influence of particle shape and angularity on the behaviour of granular materials: a numerical analysis
+-   [13] (score 3) Quantified evaluation of particle shape effects from micro-to-macro scales for non-convex grains
+-   [14] (score 3) An Extended Grain‐Based Model for Characterizing Crystalline Materials: An Example of Marble
+-   [15] (score 3) Stereology for pores in wheat bread: statistical analyses for the Boolean model by serial sections
+-   [16] (score 3) Estimation of the Size Distribution of Spherical Grains in the Boolean Model
+-   [17] (score 3) Model for the non-linear intensity dependence of photostructural changes in amorphous semiconductors
+-   [18] (score 3) A Sub-sampled Tensor Method for Non-convex Optimization
+-   [19] (score 3) Technical Report: Reactive Navigation in Partially Known Non-Convex Environments
+-   [20] (score 3) Non-Convex Structured Phase Retrieval
+-   [21] (score 3) Continuum Limit of a Double-Chain Model for Multiload Shape Optimization
+-   [22] (score 2) Grain‐Size Dependence of Fracture Energy in Ceramics: II, A Model for Noncubic Materials
+-   [23] (score 2) A grain texture model to investigate effects of grain shape and orientation on macro-mechanical behavior of crystalline rock
+-   [24] (score 2) Convex and non-convex regularization methods for spatial point processes intensity estimation
+-   [25] (score 2) Effect of local non-convexity on the critical shear strength of granular materials determined via the discrete element method
+-   [26] (score 2) Scattering properties and structure functions of Boolean models
+-   [27] (score 2) INNER-COVER OF NON-CONVEX SHAPES
+-   [28] (score 2) GAMA: A Novel Algorithm for Non-Convex Integer Programs
+-   [29] (score 2) Emo-LiPO: Listwise Preference Optimization for Fine-Grained Emotion Intensity Control in LLM-based Text-to-Speech
+-   [30] (score 2) Random Boolean Networks
+-   [31] (score 2) A convex variational formulation for a non-convex model through the Galerkin functional
+-   [32] (score 2) Non-Boolean hidden variable model reproduces Quantum Mechanics’ predictions for Bell’s experiment.
+-   [33] (score 1) Effects of grain morphology on critical state: a computational analysis
+-   [34] (score 1) Effect of realistic shape on grain crushing for rounded and angular granular materials
+-   [35] (score 1) Bi-invariant Two-Sample Tests in Lie Groups for Shape Analysis
+-   [36] (score 1) On the Online Frank-Wolfe Algorithms for Convex and Non-convex Optimizations
+-   [37] (score 1) Stochastic Optimization for DC Functions and Non-smooth Non-convex Regularizers with Non-asymptotic Convergence
+-   [38] (score 1) CAGI, the Critical Assessment of Genome Interpretation, establishes progress and prospects for computational genetic variant interpretation methods
+-   [39] (score 1) A refinement of Stone duality to skew Boolean algebras
+-   [40] (score 1) Join-irreducible Boolean functions
+-   [41] (score 1) Multi-strategy Based Quantum Cost Reduction of Quantum Boolean Circuits
+-   [42] (score 1) Dynamical Shape Control in Non-Cylindrical Navier-Stokes Equations
+-   [43] (score 0) Grain size dependent fracture toughness of nanocrystalline materials
+-   [1] (score 4) Continuum percolation for randomly oriented soft-core prisms
+-   [2] (score 4) On regular and random two-dimensional packing of crosses
+-   [3] (score 3) Percolation Thresholds in the Three-Dimensional Sticks System
+-   [4] (score 3) Continuum percolation threshold for interpenetrating squares and cubes
+-   [5] (score 3) Percolation in random sequential adsorption of extended objects on a triangular lattice
+-   [6] (score 3) Percolation in random sequential adsorption of mixtures on a triangular lattice
+-   [7] (score 3) Measuring radar cross-section of complex-shaped objects using the Doppler shift
+-   [8] (score 3) Detection of position and orientation of flying cylinder shaped objects by distance sensors
+-   [9] (score 3) Percolation through Voids around Randomly Oriented Faceted Inclusions
+-   [10] (score 3) On a property of random-oriented percolation in a quadrant
+-   [11] (score 3) Radar Cross Section Estimation for a Complex Shaped Objects Using SPSG and PO Methods
+-   [12] (score 3) An Approach to Finding the Orientation of Disk-Shaped Objects with Multiple Marks
+-   [13] (score 3) ON ORIENTATION FOR LINER AND CROSS-SHAPED SEISMIC ARRAY
+-   [14] (score 3) Free-space determination of permittivity, size and orientation of rectangular shaped objects using multivariate analysis
+-   [15] (score 3) The Orientation of T-Shaped Objects Cannot be Perceived by Dynamic Touch
+-   [16] (score 2) Percolation in three-dimensional fracture networks for arbitrary size and shape distributions
+-   [17] (score 2) Percolation in random fields. II
+-   [18] (score 2) Oriented percolation in a random environment
+-   [19] (score 2) Percolation in random fields. III
+-   [20] (score 2) Image Segmentation of Multi-shaped Overlapping Objects
+-   [21] (score 2) The Minimum Q for Spheroidally Shaped Objects: Extension to Cylindrically Shaped Objects and Comparison to Practical Antennas
+-   [22] (score 2) Gaussian beam scattering from arbitrarily shaped objects with rough surfaces
+-   [23] (score 2) A comparison principle for random walk on dynamical percolation
+-   [24] (score 2) The speed of biased random walk on percolation clusters
+-   [25] (score 2) Random matrix minor processes related to percolation theory
+-   [26] (score 2) Random site percolation thresholds on square lattice for complex neighborhoods containing sites up to the sixth coordination zone
+-   [27] (score 2) Percolation on random recursive trees
+-   [28] (score 2) Homological percolation on a torus: plaquettes and permutohedra
+-   [29] (score 2) Sharp thresholds and percolation in the plane
+-   [30] (score 2) An interlacing technique for spectra of random walks and its application to finite percolation clusters
+-   [31] (score 2) Triangle percolation in mean field random graphs -- with PDE
+-   [32] (score 2) A new look at the interfaces in percolation
+-   [33] (score 2) A fast Monte Carlo algorithm for site or bond percolation
+-   [34] (score 2) cross-shaped, adj.¹
+-   [35] (score 2) cross-shaped, adj.²
+-   [36] (score 1) Percolation Structures and Processes
+-   [37] (score 1) Oriented Percolation in Two Dimensions
+-   [38] (score 1) Percolation in ∞ + 1 dimensions
+-   [39] (score 1) Numerical Investigation of the Effect of Particle Shape On Percolation
+-   [41] (score 1) Perturbations of supercritical oriented percolation and sticky Brownian webs
+-   [42] (score 1) Mixed-wet percolation on a dual square lattice
+-   [43] (score 1) Mission-Shaped Church, Mission-Shaped Hospitality?
+-   [44] (score 1) NORMAL BELL-SHAPED CURVE
+-   [45] (score 0) Conclusion
+
+Model-recall additions (Source: model-recall):
+- Meester, Roy, Sarkar. Nonuniversality and continuity of the critical covered volume fraction in continuum percolation. J. Stat. Phys. 75 (1994) 123–134.
+- Franceschetti, Booth, Cook, Meester, Bruck. Continuum percolation with unreliable and spread-out connections. J. Stat. Phys. 118 (2005) 721–734.
+- Jonasson. Optimization of shape in continuum percolation. Ann. Probab. 29 (2001) 624–635.
+- Meester, Roy. Continuum Percolation. Cambridge Univ. Press (1996).

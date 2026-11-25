@@ -1,0 +1,4 @@
+# Step 7 — Delta and Verdict
+Timestamp: 2026-11-24T22:09:29Z
+Delta: Unlike Geigenfeind & de las Heras (2019), who compute only the normalized orientation dependence of the excluded area of star lines for hard-particle phase behaviour, and Mertens & Moore (2012), who obtain percolation thresholds numerically for convex shapes and sticks, the proposed work gives the first thresholds for regular k-armed stars and proves, via an exact lattice-covering representation of the contact probability, that the excluded-area deficit is Ck^{-2/3} − C′k^{-4/3} + O(k^{-2}) and that n_c(k) converges to the disk threshold at rate O(k^{-2/3}). This yields closed-form constants and a rigorous, quantitative shape-convergence rate for a non-convex family. No such rate was found in the Boolean-model literature, which treats convex grains (Roy–Tanemura) or qualitative continuity (Meester–Roy–Sarkar).
+Verdict: Level 3 — Medium Overlap.

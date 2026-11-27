@@ -2,6 +2,10 @@
 
 **Taiyo Toyama** (遠山 大陽) — Hokkaido Asahikawa Higashi High School, Asahikawa, Hokkaido, Japan
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24580636.svg)](https://doi.org/10.5281/zenodo.24580636)
+
+**Preprint:** https://doi.org/10.5281/zenodo.24580636
+
 Two-dimensional continuum percolation of randomly placed, randomly oriented *k-armed stars*
 (k zero-width segments of length *a* from a common centre at equal angles), which interpolate between
 sticks (k = 2) and disks (k → ∞).
@@ -50,6 +54,11 @@ The full runs took about 2 hours on a 10-core laptop.
 T. Toyama initiated and directed the project (choice of research area, priority on novelty, the decision to seek a mathematical proof and to test the conjectured prefactor numerically), checked the results, and takes full responsibility for the content. Generative AI (Claude, Anthropic) was used extensively in this work, including for the analysis,
 code and drafting of the manuscript. All code and data are in this repository.
 
+## How to cite
+
+T. Toyama, *Continuum percolation of k-armed stars in two dimensions: a k^(−2/3) approach to the disk limit*,
+preprint, Zenodo (2026). https://doi.org/10.5281/zenodo.24580636
+
 ## Licence
 
 Code: MIT (`LICENSE`). Data, figures, manuscripts and notes: CC BY 4.0 (`LICENSE-data-and-text.md`).
@@ -59,6 +68,8 @@ Code: MIT (`LICENSE`). Data, figures, manuscripts and notes: CC BY 4.0 (`LICENSE
 # 二次元における k 本腕の星形物体の連続体パーコレーション（日本語要約）
 
 **遠山 大陽**（北海道旭川東高等学校 3年）
+
+プレプリント：https://doi.org/10.5281/zenodo.24580636
 
 腕の本数 k を増やして円板に近づけたとき，平均排除面積の円板との差が k^(−2/3) という遅い速さで縮むことを，
 係数まで含めて証明した（定理1）。また，臨界密度が円板の値に O(k^(−2/3)) で近づくことを，

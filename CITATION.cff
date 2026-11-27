@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the preprint."
+title: "Continuum percolation of k-armed stars in two dimensions: a k^(-2/3) approach to the disk limit"
+authors:
+  - family-names: Toyama
+    given-names: Taiyo
+    affiliation: "Hokkaido Asahikawa Higashi High School"
+type: software
+license: MIT
+repository-code: "https://github.com/toyamataiyo03-cpu/k-star-percolation"
+preferred-citation:
+  type: article
+  title: "Continuum percolation of k-armed stars in two dimensions: a k^(-2/3) approach to the disk limit"
+  authors:
+    - family-names: Toyama
+      given-names: Taiyo
+  year: 2026
+  doi: 10.5281/zenodo.24580636
+  url: "https://doi.org/10.5281/zenodo.24580636"

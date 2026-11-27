@@ -62,6 +62,10 @@ README = f"""# Continuum percolation of k-armed stars in two dimensions
 
 **{A['name_en']}** ({A['name_ja']}) — {A['affil_en']}
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24580636.svg)](https://doi.org/10.5281/zenodo.24580636)
+
+**Preprint:** https://doi.org/10.5281/zenodo.24580636
+
 Two-dimensional continuum percolation of randomly placed, randomly oriented *k-armed stars*
 (k zero-width segments of length *a* from a common centre at equal angles), which interpolate between
 sticks (k = 2) and disks (k → ∞).
@@ -110,6 +114,11 @@ The full runs took about 2 hours on a 10-core laptop.
 {A['contrib_en']} Generative AI (Claude, Anthropic) was used extensively in this work, including for the analysis,
 code and drafting of the manuscript. All code and data are in this repository.
 
+## How to cite
+
+T. Toyama, *Continuum percolation of k-armed stars in two dimensions: a k^(−2/3) approach to the disk limit*,
+preprint, Zenodo (2026). https://doi.org/10.5281/zenodo.24580636
+
 ## Licence
 
 Code: MIT (`LICENSE`). Data, figures, manuscripts and notes: CC BY 4.0 (`LICENSE-data-and-text.md`).
@@ -120,12 +129,34 @@ Code: MIT (`LICENSE`). Data, figures, manuscripts and notes: CC BY 4.0 (`LICENSE
 
 **{A['name_ja']}**（{A['affil_ja']}）
 
+プレプリント：https://doi.org/10.5281/zenodo.24580636
+
 腕の本数 k を増やして円板に近づけたとき，平均排除面積の円板との差が k^(−2/3) という遅い速さで縮むことを，
 係数まで含めて証明した（定理1）。また，臨界密度が円板の値に O(k^(−2/3)) で近づくことを，
 円板の臨界値を使わずに証明した（定理2）。係数 0.873 は予想であり，k = 512 までの数値と 0.5% 以内で一致する。
 解析・コード作成・原稿の起草を含め，生成AI（Claude）を広く利用した。
 """
 open(os.path.join(DST, "README.md"), "w").write(README)
+open(os.path.join(DST, "CITATION.cff"), "w").write("""cff-version: 1.2.0
+message: "If you use this work, please cite the preprint."
+title: "Continuum percolation of k-armed stars in two dimensions: a k^(-2/3) approach to the disk limit"
+authors:
+  - family-names: Toyama
+    given-names: Taiyo
+    affiliation: "Hokkaido Asahikawa Higashi High School"
+type: software
+license: MIT
+repository-code: "https://github.com/toyamataiyo03-cpu/k-star-percolation"
+preferred-citation:
+  type: article
+  title: "Continuum percolation of k-armed stars in two dimensions: a k^(-2/3) approach to the disk limit"
+  authors:
+    - family-names: Toyama
+      given-names: Taiyo
+  year: 2026
+  doi: 10.5281/zenodo.24580636
+  url: "https://doi.org/10.5281/zenodo.24580636"
+""")
 import re
 for sh in ("jobs.sh", "jobs_fast.sh"):
     p = os.path.join(DST, sh)
